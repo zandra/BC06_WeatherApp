@@ -155,7 +155,7 @@
 
     // API call functions
     function getWeather(cityName) {
-
+      const apiKey = "132f2f03d46f6f2eca8c1d985f753772";
       // Openweather Weather API call
       const dayQueryURL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${units}&APPID=${apiKey}`;
       $.ajax({
