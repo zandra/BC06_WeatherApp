@@ -157,7 +157,7 @@
     function getWeather(cityName) {
       const apiKey = "132f2f03d46f6f2eca8c1d985f753772";
       // Openweather Weather API call
-      const dayQueryURL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${units}&APPID=${apiKey}`;
+      const dayQueryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${units}&APPID=${apiKey}`;
       $.ajax({
         url: dayQueryURL,
         method: "GET"
@@ -165,7 +165,7 @@
 
       // Openweather Forecast API call
       const forecastQueryURL =
-        `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=${units}&APPID=${apiKey}`;
+        `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=${units}&APPID=${apiKey}`;
       $.ajax({
         url: forecastQueryURL,
         method: "GET"
@@ -174,11 +174,11 @@
 
     function getWeatherByCity(response) {
       let iconCode = response.weather[0].icon;
-      const iconURL = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+      const iconURL = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
       const today = moment().format("L");
       
       // // UV API call
-      // const uvQueryURL = `http://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${response.coord.lat}&lon=${response.coord.lon}`;
+      // const uvQueryURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${response.coord.lat}&lon=${response.coord.lon}`;
       
       // $.ajax({
       //   url: uvQueryURL,
@@ -230,7 +230,7 @@
         let humidity = eachDayResponse[d-1].map( h => h.main.humidity)
         .reduce( (total, each) => total + each, 0) / eachDayResponse[d-1].length;
 
-        const cardIconURL = `http://openweathermap.org/img/wn/${cardIconCode}@2x.png`;
+        const cardIconURL = `https://openweathermap.org/img/wn/${cardIconCode}@2x.png`;
         const date = moment().add(`${this.dataset.day}`, 'days').format('L');
 
         $(this).children('.card-header').empty().append(`${date}`);
