@@ -115,7 +115,7 @@
     const iconArray = ['01d', '02d', '03d', '04d', '09d', '10d', '11d', '13d', '50d']; 
 
     $('.card-icon').each( function() {
-      $(this).empty().append(`<img src='http://openweathermap.org/img/wn/${iconArray[Math.floor( Math.random() * iconArray.length )]}@2x.png'>`);
+      $(this).empty().append(`<img src='https://openweathermap.org/img/wn/${iconArray[Math.floor( Math.random() * iconArray.length )]}@2x.png'>`);
     });
 
     let searchedCities = localStorage.getItem('searchHistory') ?
