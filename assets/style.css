@@ -1,0 +1,41 @@
+.header {
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+.search_history {
+  background: snow;
+  color: black;
+  height: 3rem;
+  width: auto;
+  border: .5px solid grey;
+  text-decoration: none;
+}
+
+.current-weather {
+  height: 300px;
+  border: 1px solid black;
+}
+
+p.loc {
+  margin: 1rem;
+}
+
+h4 {
+  margin: 1rem;
+}
+
+h5 {
+  margin-top: 1rem;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+
+
